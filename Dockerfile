@@ -29,7 +29,8 @@ RUN apt-get install -y \
         libonig-dev \
         unzip \
         iproute2 \
-        iputils-ping
+        iputils-ping \
+        imagemagick
 
 RUN echo alias ll=\'ls -lF\' >> /root/.bashrc
 
@@ -51,6 +52,8 @@ RUN /usr/local/bin/docker-php-ext-install bcmath
 RUN /usr/local/bin/docker-php-ext-install ldap
 RUN /usr/local/bin/docker-php-ext-install curl
 RUN /usr/local/bin/docker-php-ext-install sockets
+
+ADD etc/ImageMagick/policy.xml /etc/ImageMagick-6/policy.xml
 
 RUN pecl install xmlrpc-beta
 RUN docker-php-ext-enable xmlrpc
