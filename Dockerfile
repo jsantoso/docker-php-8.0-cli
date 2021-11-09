@@ -30,7 +30,9 @@ RUN apt-get install -y \
         unzip \
         iproute2 \
         iputils-ping \
-        imagemagick
+        imagemagick \
+        lftp \
+        poppler-utils
 
 RUN echo alias ll=\'ls -lF\' >> /root/.bashrc
 
