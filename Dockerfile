@@ -32,7 +32,9 @@ RUN apt-get install -y \
         iputils-ping \
         imagemagick \
         lftp \
-        poppler-utils
+        poppler-utils \
+        zip \
+        pdftk
 
 RUN echo alias ll=\'ls -lF\' >> /root/.bashrc
 
