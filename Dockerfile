@@ -34,7 +34,8 @@ RUN apt-get install -y \
         lftp \
         poppler-utils \
         zip \
-        pdftk
+        pdftk \
+        expect
 
 RUN echo alias ll=\'ls -lF\' >> /root/.bashrc
 
